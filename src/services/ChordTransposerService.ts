@@ -25,7 +25,7 @@ export default class ChordTransposer {
         const scale: string[] = [];
         let currentIndex = this.getChordRootIndex();
 
-        for (let interval of this.majorScaleIntervals) {
+        for (const interval of this.majorScaleIntervals) {
             scale.push(this.chromaticScale[currentIndex % this.chromaticScale.length]);
             currentIndex += interval;
         }
